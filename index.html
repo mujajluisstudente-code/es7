@@ -1,0 +1,38 @@
+<h2>Registrazione Utente</h2>
+<form action="SalvaDatiRegistrazione.php" method="post">
+  <label>Username:</label><br>
+  <input type="text" name="username" required><br><br>
+
+  <label>nome:</label><br>
+  <input type="text" name="nome" required><br><br>
+
+  <label>cognome:</label><br>
+  <input type="text" name="cognome" required><br><br>
+
+  <label>email:</label><br>
+  <input type="text" name="email" required><br><br>
+
+  <label>Password:</label><br>
+  <input type="password" name="password" required><br><br>
+
+  <label>Data di Nascita:</label><br>
+  <input type="date" name="data_nascita" required><br><br>
+
+  <label>Sesso:</label><br>
+  <select name="sesso" required>
+    <option value="">-- Seleziona --</option>
+    <option value="M">Maschile</option>
+    <option value="F">Femminile</option>
+    <option value="N">Preferisco non dirlo</option>
+  </select><br><br>
+
+  <label>Codice Fiscale:</label><br>
+  <input type="text" name="codice_fiscale" maxlength="16" pattern="[A-Za-z0-9]{16}" 
+         title="Inserisci 16 caratteri alfanumerici" required
+         oninput="this.value = this.value.toUpperCase()"><br><br>
+
+
+
+
+  <button type="submit">Registrati</button>
+</form>

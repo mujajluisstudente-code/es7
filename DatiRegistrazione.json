@@ -1,0 +1,13 @@
+[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "username": "mario",
+        "password": "$2y$10$abcd...",
+        "email": "mario@example.com",
+        "codice_fiscale": "RSSMRA85M01H501U",
+        "data_nascita": "1985-01-01",
+        "sesso": "M"
+    }
+]
+
