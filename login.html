@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Utente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <h2>Accesso Utente</h2>
+            
+            <?php
+            if (isset($_GET['msg']) && isset($_GET['color'])) {
+                $message = $_GET['msg'];
+                $color = $_GET['color'];
+                $messageClass = $color === 'green' ? 'success' : 'error';
+                echo "<div class='message $messageClass'>" . htmlspecialchars(urldecode($message)) . "</div>";
+            }
+            ?>
+            
+            <form action="VerificaLogin.php" method="post">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">Accedi</button>
+            </form>
+            
+            <div class="register-link">
+                <p>Non hai un account? <a href="index.html">Registrati qui</a></p>
+            </div>
+        </div>
+        
+        <!-- Sezione informativa -->
+        <div class="info-section">
+            <h2>Bentornato!</h2>
+            <p>Accedi al tuo account per gestire il tuo profilo e accedere ai servizi esclusivi.</p>
+        </div>
+    </div>
+</body>
+</html>
